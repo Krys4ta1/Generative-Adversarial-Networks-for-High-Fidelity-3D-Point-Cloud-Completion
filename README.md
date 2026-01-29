@@ -296,13 +296,22 @@ save_point_cloud("completed_point_cloud.txt", completed_pc)
 
 - Default parameters such as `num_points`, `input_dim`, and filtering thresholds are provided but can be adjusted for different datasets.
 
+---
+
 ## Dataset
 
 The experiments in this work are based on the **ModelNet40** dataset.
 
 Due to the inherent randomness of Generative Adversarial Network training, the generated point clouds may vary between training runs. Therefore, exact replication of every individual point in the generated point clouds is not expected.
 
-To facilitate reproduction and comparison, we provide a **pre-trained Generator model for the chair category** (`best_generator_chair.pth`) in the repository. This file contains the weights of the model trained for our chair experiments and can be directly used to generate chair point clouds without retraining.
+To facilitate reproduction and comparison, we provide **example point cloud files for the chair category** in the repository. These include:
+- the incomplete input point cloud (`*partial_chair.txt`),
+- the generated point cloud from the GAN (`*generated_chair.txt`),
+- and the final completed point cloud after fusion and downsampling (`*completed_chair.txt`).
+
+These files demonstrate the workflow of our method and can be directly used to visualize or evaluate chair point cloud completion without retraining the model.
+
+---
 
 ## Citation
 
@@ -316,6 +325,8 @@ year={2026}
 }
 
 **Note:** This repository is directly related to the submitted manuscript to *The Visual Computer*.
+
+---
 
 ## License
 
